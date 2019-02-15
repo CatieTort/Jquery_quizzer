@@ -1,27 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Quizzer</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab" rel="stylesheet">
-		<link rel="stylesheet" href="./style.css">
-		<script type="application/javascript" href="./index.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+  	<script src="js/jquery-ui.min.js"></script>
 
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 
 		<div class="content_container">
-
-			<div class="item panel_one" data-panel="0">
+		<!-- PANEL ONE -->
+			<div class="item panel_one hidden" data-panel="0">
 				<div class="wrapper">
-					<h1 class="title">Quizzer</h1>
+					<h1 class="title hidden">Quizzer</h1>
 					<div class="start_btn">
 						Start Quiz
 					</div>
 				</div>
 			</div>
 
+			<!-- PANEL TWO -->
+				<div class="item panel_two hidden" data-panel="1">
+					<div class="wrapper">
+							<h3 class="question">Pick a number:</h1>
+							<div class="options">
+								<div>One</div>
+								<div>Two</div>
+								<div>Three</div>
+							</div>
+							<div class="next_quest" data-next="2">Next Question</div>
+					</div>
+				</div>
+
+				<!-- PANEL THREE -->
+					<div class="item panel_three hidden" data-panel="2">
+						<div class="wrapper">
+								<h3 class="question">Would you rather ride?</h1>
+								<div class="options">
+									<div>Horse</div>
+									<div>Bike</div>
+									<div>Rollercoaster</div>
+								</div>
+								<div class="next_quest" data-next="3">Next Question</div>
+						</div>
+					</div>
+
+					<!-- PANEL FOUR -->
+						<div class="item panel_four hidden" data-panel="3">
+							<div class="wrapper">
+									<h3 class="question">Is your glass half full or half empty?</h1>
+									<div class="options">
+										<div>Half full</div>
+										<div>Half empty</div>
+									</div>
+									<div class="next_quest" data-next="4">Next Question</div>
+							</div>
+						</div>
+
+						<!-- PANEL FIVE -->
+							<div class="item panel_five hidden" data-panel="4">
+								<div class="wrapper">
+										<h3 class="question">Who would you want to play you in a movie of your life?</h1>
+										<div class="options">
+											<div>Robert Di Niro</div>
+											<div>Ryan Reynolds</div>
+											<div>Judy Dench</div>
+											<div>Lindsey Lohan</div>
+										</div>
+										<div class="next_quest" data-next="5">Finish Quiz</div>
+								</div>
+							</div>
+
+							<div class="item panel_six hidden" data-panel="5">
+								<div class="wrapper">
+									<div class="thanks">Thank you for taking the Quiz!</div>
+									<div class="answers">
+										Your Answers:
+										<ol></ol>
+									</div>
+								</div>
+							</div>
+
+
+			<div class="error">
+				Please make a selection
+			</div>
+			<div class="progress">
+				<div class="bar"></div>
+			</div>
 		</div>
 
 	</body>
